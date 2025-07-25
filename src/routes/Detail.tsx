@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { IMDBMovie } from '../model/movie';
 import { FavoritesContextType } from '../App';
@@ -9,7 +9,7 @@ interface DetailProps {
   favoritesContext: FavoritesContextType;
 }
 
-const Detail: FunctionComponent<DetailProps> = ({ favoritesContext }) => {
+const Detail = ({ favoritesContext }: DetailProps) => {
   const { id } = useParams<{ id: string }>();
   const [movie, setMovie] = useState<IMDBMovie | null>(null);
   const [loading, setLoading] = useState(true);

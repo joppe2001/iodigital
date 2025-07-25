@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+
 import clsx from 'clsx';
 import { IMDBMovie } from '../model/movie';
 import { FavoritesContextType } from '../App';
@@ -8,7 +8,7 @@ interface ToggleProps {
   favoritesContext: FavoritesContextType;
 }
 
-const Toggle: FunctionComponent<ToggleProps> = ({ movie, favoritesContext }) => {
+const Toggle = ({ movie, favoritesContext }: ToggleProps) => {
   const isFavorited = favoritesContext.isFavorite(movie.imdbID);
 
   const handleToggle = () => {

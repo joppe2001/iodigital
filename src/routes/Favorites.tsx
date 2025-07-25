@@ -1,4 +1,3 @@
-import { FunctionComponent } from 'react';
 import { IMDBMovie } from '../model/movie';
 import MovieCard from '../components/MovieCard';
 
@@ -7,7 +6,7 @@ interface FavoritesProps {
   removeFromFavorites: (movieId: string) => void;
 }
 
-const Favorites: FunctionComponent<FavoritesProps> = ({ favorites, removeFromFavorites }) => {
+const Favorites = ({ favorites, removeFromFavorites }: FavoritesProps) => {
   if (favorites.length === 0) {
     return (
       <div className="text-center py-12">

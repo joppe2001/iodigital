@@ -1,6 +1,4 @@
-import { FunctionComponent } from "react";
-
-const Spinner: FunctionComponent = () => {
+const Spinner = () => {
   return (
     <div className="p-4 flex justify-center text-black transition ease-in-out duration-150 cursor-not-allowed">
       <svg

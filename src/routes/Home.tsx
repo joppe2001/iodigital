@@ -1,4 +1,3 @@
-import { FunctionComponent } from 'react';
 import { IMDBMovie } from '../model/movie';
 import MovieCard from '../components/MovieCard';
 import Spinner from '../components/Spinner';
@@ -9,7 +8,7 @@ interface HomeProps {
   error: string | null;
 }
 
-const Home: FunctionComponent<HomeProps> = ({ movies, loading, error }) => {
+const Home = ({ movies, loading, error }: HomeProps) => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">

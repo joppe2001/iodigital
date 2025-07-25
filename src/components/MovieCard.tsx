@@ -1,4 +1,3 @@
-import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { IMDBMovie } from '../model/movie';
 
@@ -7,7 +6,7 @@ interface MovieCardProps {
   onRemove?: (movieId: string) => void;
 }
 
-const MovieCard: FunctionComponent<MovieCardProps> = ({ movie, onRemove }) => {
+const MovieCard = ({ movie, onRemove }: MovieCardProps) => {
   const handleRemove = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();

@@ -1,10 +1,10 @@
-import { FunctionComponent, useState } from 'react';
+import { useState } from 'react';
 
 interface SearchProps {
   onSearch: (searchTerm: string) => void;
 }
 
-const Search: FunctionComponent<SearchProps> = ({ onSearch }) => {
+const Search = ({ onSearch }: SearchProps) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
